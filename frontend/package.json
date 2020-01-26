@@ -6,8 +6,11 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "rimraf dist && parcel build ./src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "jest --watch"
+	},
+	"jest": {
+		"setupTestFrameworkScriptFile": "./setupTests.js"
+	},
   "keywords": [],
   "author": "Leslie T",
   "license": "MIT",
@@ -17,6 +20,13 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+		 "@testing-library/jest-dom": "^4.2.0",
+    "@testing-library/react": "^9.3.0",
+		"@testing-library/user-event": "^8.0.4",
+		"jest": "25.1.0",
+		"enzyme": "3.11.0",
+		"enzyme-adapter-react-16": "1.15.2",
+
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
